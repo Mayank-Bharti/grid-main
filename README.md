@@ -55,4 +55,4 @@ To run this project locally, follow these steps:
    ### Navigate to `http://localhost:3000`
 
 ## Video
-### [![Click to see the working here:]](https://drive.google.com/file/d/16wsj61l5UNGWje-TKSJ9a00oofQB8RsK/view?usp=sharing)
+### [[Click to see the working here:]](https://drive.google.com/file/d/16wsj61l5UNGWje-TKSJ9a00oofQB8RsK/view?usp=sharing)
