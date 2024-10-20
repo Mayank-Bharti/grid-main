@@ -21,20 +21,27 @@ This project is a smart vision-based quality testing system designed for the eco
 - *Quantity Detection*: Automatically counts products, ensuring that correct quantities are packed and shipped.
 
 ## Technology Stack
-- *Frontend*: 
+- *Frontend*:
+  
   - React.js
   - CSS
+    
 - *Backend*:
+  
   - Node.js
   - Python Flask
+    
 - *Deep Learning*:
+  
   - TensorFlow for CNN (Convolutional Neural Networks)
   - Tesseract.js for OCR
   - Pytorch
   - Keras
   - OpenCV
   - easyOCR
+    
 - *Hardware*:
+  
   - High-resolution cameras for image capture
 
 ## Installation
@@ -58,7 +65,6 @@ To run this project locally, follow these steps:
 ### [[Click to see the working here:]](https://drive.google.com/file/d/16wsj61l5UNGWje-TKSJ9a00oofQB8RsK/view?usp=sharing)
 
 ## Screenshots
-![Screenshot 2024-10-21 000051](https://github.com/user-attachments/assets/704291ce-cd81-42c4-9f8d-3fe9bfbaa16e)
 ![Screenshot 2024-10-21 000127](https://github.com/user-attachments/assets/9dc091fe-9f53-4f9a-b278-58c53f8bf11f)
 ![Screenshot 2024-10-21 000143](https://github.com/user-attachments/assets/12987f41-6ac7-4a97-95ad-0050386acf0a)
 ![Screenshot 2024-10-21 000200](https://github.com/user-attachments/assets/1d57c81c-a9fb-4045-b1ab-3ce826ed365a)
