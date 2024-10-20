@@ -7,49 +7,52 @@
 - [Features](#features)
 - [Technology Stack](#technology-stack)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Video](#video)
 - [Screenshots](#screenshots)
-- [Challenges Faced](#challenges-faced)
-- [Future Improvements](#future-improvements)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
 ## Introduction
-This project is a smart vision-based quality testing system designed for the ecommerce industry. The system automates the inspection of products, ensuring both quality and quantity control using *high-resolution cameras, **image processing, and **machine learning*. It significantly reduces manual labor, improves accuracy, and offers real-time defect detection.
+This project is a smart vision-based quality testing system designed for the ecommerce industry. The system automates the inspection of products, ensuring both quality and quantity control using *high-resolution cameras, **image processing, and **deep learning*. It significantly reduces manual labor, improves accuracy, and offers real-time defect detection.
 
 ## Features
 - *OCR (Optical Character Recognition)*: Extracts product information, brand, expiration date, and MRP from product labels.
 - *Freshness Detection*: Analyzes visual cues to assess the freshness of perishable goods.
 - *Quantity Detection*: Automatically counts products, ensuring that correct quantities are packed and shipped.
-- *Real-Time Feedback*: Provides immediate insights into product quality and alerts for defective items.
-- *Automated Integration*: Works seamlessly with conveyor belts and inventory management systems.
 
 ## Technology Stack
 - *Frontend*: 
   - React.js
-  - CSS (Green and Creamish color theme)
+  - CSS
 - *Backend*:
-  - Node.js (Express.js)
-  - Flask
-- *Machine Learning*:
+  - Node.js
+  - Python Flask
+- *Deep Learning*:
   - TensorFlow for CNN (Convolutional Neural Networks)
   - Tesseract.js for OCR
+  - Pytorch
+  - Keras
+  - OpenCV
+  - easyOCR
 - *Hardware*:
   - High-resolution cameras for image capture
-  - Lighting control for optimal image quality
 
 ## Installation
 To run this project locally, follow these steps:
 
 1. *Clone the repository*:
    bash
-   git clone https://github.com/your-username/smart-vision-quality-testing.git
-   cd smart-vision-quality-testing                                                                                                                                                  2. 2. 2. *Install frontend dependencies*:
+   git clone https://github.com/Mayank-Bharti/grid-main.git
+   cd grid-main
+2. *Install frontend dependencies*:
    bash                                                                                                                                                                                       cd frontend
    npm install
 3. *Install backend dependencies*:
    bash
    cd ../backend
    npm install
+4. *Access the application*:
+   ### Navigate to `http://localhost:3000`
+
+## Video
+### [![Click to see the working here:](https://drive.google.com/file/d/16wsj61l5UNGWje-TKSJ9a00oofQB8RsK/view?usp=sharing)
