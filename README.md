@@ -46,10 +46,10 @@ To run this project locally, follow these steps:
 1. *Clone the repository*:
    bash
    git clone https://github.com/your-username/smart-vision-quality-testing.git
-   cd smart-vision-quality-testing                                                                                                                                                  2. **Install frontend dependencies**:
- bash                                                                                                                                                                                     cd frontend
-npm install
-
-# Install backend dependencies
-cd ../backend
-npm install
+   cd smart-vision-quality-testing                                                                                                                                                  2. 2. 2. *Install frontend dependencies*:
+   bash                                                                                                                                                                                       cd frontend
+   npm install
+3. *Install backend dependencies*:
+   bash
+   cd ../backend
+   npm install
