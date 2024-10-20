@@ -72,3 +72,8 @@ To run this project locally, follow these steps:
 ![Screenshot 2024-10-21 000341](https://github.com/user-attachments/assets/3826adef-bc8e-4232-bd65-4223eecd3b3d)
 ![Screenshot 2024-10-21 000410](https://github.com/user-attachments/assets/e50bf909-b0e7-4db8-a4b1-eed689ad6e34)
 
+## Contact
+### If you have any doubts or suggestions you can always reach out to me from the ways mentioned below:
+- Email: `mayankbharti349@gmail.com`
+- GitHub: `https://github.com/Mayank-Bharti/`
+- LinkedIn: `www.linkedin.com/in/mayank-bharti-839b07261`
