@@ -1,4 +1,4 @@
-# Smart Vision Quality Testing System
+# Smart Vision Technology Quality Control
 
 ### Automating the quality and quantity testing process for India's largest ecommerce platform using smart vision technology.
 
