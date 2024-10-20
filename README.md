@@ -65,7 +65,6 @@ To run this project locally, follow these steps:
 ### [[Click to see the working here:]](https://drive.google.com/file/d/16wsj61l5UNGWje-TKSJ9a00oofQB8RsK/view?usp=sharing)
 
 ## Screenshots
-![Screenshot 2024-10-21 000127](https://github.com/user-attachments/assets/9dc091fe-9f53-4f9a-b278-58c53f8bf11f)
 ![Screenshot 2024-10-21 000143](https://github.com/user-attachments/assets/12987f41-6ac7-4a97-95ad-0050386acf0a)
 ![Screenshot 2024-10-21 000200](https://github.com/user-attachments/assets/1d57c81c-a9fb-4045-b1ab-3ce826ed365a)
 ![Screenshot 2024-10-21 000307](https://github.com/user-attachments/assets/6a9b0f77-d638-4fbe-b56a-f43c33fb43d0)
