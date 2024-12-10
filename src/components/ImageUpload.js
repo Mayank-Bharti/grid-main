@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const API_CONFIG = {
   Freshness: { url: 'http://127.0.0.1:7000/predict', key: 'file' },
-  OCR: { url: 'http://192.168.115.101:7000/upload', key: 'image' },
+  OCR: { url: 'http://192.168.192.101:7000/upload', key: 'image' },
   Quantity: { url: 'http://127.0.0.1:5000/count', key: 'file' },
 };
 
@@ -66,8 +66,27 @@ const ImageUpload = ({ selectedOption, onResult }) => {
   // Handle response for freshness prediction
   const handleFreshnessResponse = (response) => {
     const prediction = response.data.prediction || 'No prediction received';
-    onResult([{ label: 'Freshness Prediction', value: prediction }]);
+  
+    // Logic for categorizing the freshness
+    if (prediction === 'Expired') {
+      onResult([{ label: 'Freshness Status', value: 'Expired' }]);
+    } else {
+      const daysMatch = prediction.match(/\((\d+)-(\d+)\)/); // Matches (min-max) format
+      if (daysMatch) {
+        const minDays = parseInt(daysMatch[1], 10);
+        const maxDays = parseInt(daysMatch[2], 10);
+  
+        if (minDays >= 10) {
+          onResult([{ label: 'Freshness Status', value: `${prediction} days completed - About to Expire` }]);
+        } else {
+          onResult([{ label: 'Freshness Status', value: `${prediction} days completed- Fresh` }]);
+        }
+      } else {
+        onResult([{ label: 'Freshness Status', value: prediction }]); // Fallback if no days info
+      }
+    }
   };
+  
 
   // Handle OCR response to extract text from the image
   const handleOCRResponse = (response) => {
