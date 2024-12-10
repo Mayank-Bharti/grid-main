@@ -23,6 +23,8 @@ import cv2
 from ultralytics import YOLO
 from werkzeug.utils import secure_filename
 from flask_cors import CORS
+from DB.Quant import store_quantity_result   # Import the function from the utility module
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -88,6 +90,9 @@ def count_items():
                             object_counts[class_name] += 1
                         else:
                             object_counts[class_name] = 1
+
+                # Store the detection result in the MongoDB database using the utility function
+                store_quantity_result(filename, detections)
 
                 # Return both detections and object counts
                 return jsonify({
