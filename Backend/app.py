@@ -6,12 +6,13 @@ from PIL import Image
 import numpy as np
 import io
 from flask_cors import CORS
+from DB.freshness import store_freshness_result  # Import the function from db.py
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS to allow cross-origin requests
 
 # Load your trained model
-model_path = 'C:\\Users\\Mayank bharti\\Documents\\GitHub\\grid\\Backend\\model_final1'  # Adjust to your model path
+model_path = 'C:\\Users\\Mayank bharti\\Documents\\GitHub\\grid\\Backend\\model_final1'
 model = torch.load(model_path, map_location=torch.device('cpu'))  # Load the model for CPU
 model.eval()  # Set model to evaluation mode
 
@@ -20,7 +21,7 @@ class_labels = [
     'Apple(1-5)', 'Apple(10-14)', 'Apple(5-10)',
     'Banana(1-5)', 'Banana(10-15)', 'Banana(15-20)', 'Banana(5-10)',
     'Carrot(1-2)', 'Carrot(3-4)', 'Expired',
-    'Tomato(1-5)', 'Tomato(10-15)', 'Tomato(5-10)', 'carrot(5-6)'
+    'Tomato(1-5)', 'Tomato(10-15)', 'Tomato(5-10)', 'Carrot(5-6)'
 ]
 
 # Preprocess function
@@ -52,8 +53,11 @@ def predict():
     # Return the prediction result based on your class labels
     prediction = class_labels[predicted_class.item()]
 
+    # Store the prediction result in MongoDB
+    store_freshness_result(file.filename, prediction)
+
     # Return the prediction result
     return jsonify({'prediction': prediction})
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=5000)
+    app.run(host='127.0.0.1', port=7000)

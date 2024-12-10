@@ -4,6 +4,8 @@ import pytesseract
 import re
 from datetime import datetime
 from flask_cors import CORS
+from DB.connect import db  # Import MongoDB connection
+from DB.descript import store_ocr_result  # Import the function to store results in DB
 
 app = Flask(__name__)
 CORS(app, origins=["http://localhost:3000"])  # Only allow requests from this origin
@@ -55,6 +57,7 @@ def upload_image():
         return jsonify({"error": "No image uploaded"}), 400
 
     file = request.files['image']
+    image_name = file.filename
     file.save("temp_image.jpg")
 
     # Read the saved image using OpenCV
@@ -79,6 +82,10 @@ def upload_image():
     # Check expiry status
     status, color = check_expiry_status(expiry_date)
 
+    # Store the results in MongoDB using the existing function
+    store_ocr_result(image_name, text, expiry_date, status, color)
+
+    # Return the result as a JSON response
     return jsonify({
         "extracted_text": text,
         "expiry_date": expiry_date,
