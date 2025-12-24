@@ -52,14 +52,32 @@ To run this project locally, follow these steps:
    git clone https://github.com/Mayank-Bharti/grid-main.git
    cd grid-main
 2. *Install frontend dependencies*:
-   bash                                                                                                                                                                                       cd frontend
-   npm install
-3. *Install backend dependencies*:
    bash
-   cd ../backend
+   cd ./frontend                                                                                                                                                                                    cd frontend
    npm install
-4. *Access the application*:
-   ### Navigate to `http://localhost:3000`
+   npm run dev
+4. *Install backend dependencies*:
+   bash
+   cd ./backend
+   For Quantity: 1.python -m venv yolov8_env
+                 2. yolov8_env\Scripts\activate
+                 3. pip install ultralytics, pip install opencv-python matplotlib, pip install flask flask-cors, pip install pytesseract, pip install pymongo, pip install load_dotenv
+                 4. Run `python count.py`
+   For OCR: 1. Install all dependencies like pip install flask flask-cors pymongo opencv-python pytesseract load_dotenv
+            2.Download Tesseract OCR: https://github.com/tesseract-ocr/tesseract
+            3. Install it in your system.
+            4. Add in environment variables path,[C:\Program Files\Tesseract-OCR\]
+            5. Add in code [pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe']
+            6. Run `python ocr.py`
+   For app.py: 1. Install all dependencies like pip install flask flask-cors pymongo opencv-python torch load_dotenv
+               2. Run `python app.py`
+
+6. *Access the backend application*:
+    ### Freshness: `[http://127.0.0.1:7000/predict]`
+    ###  OCR: `[http://127.0.0.1:7001/upload]`
+    ### Quantity: `[http://127.0.0.1:5000/count]`
+7. *Access the Frontend application*:
+   ### Navigate to `[http://localhost:5173]`
 
 ## Video
 ### [[Click to see the working here:]](https://drive.google.com/file/d/16wsj61l5UNGWje-TKSJ9a00oofQB8RsK/view?usp=drive_link)
