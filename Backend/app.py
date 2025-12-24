@@ -7,22 +7,13 @@ import numpy as np
 import io
 from flask_cors import CORS
 from DB.freshness import store_freshness_result  # Import the function from db.py
-import torchvision
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS to allow cross-origin requests
 
 # Load your trained model
-model_path = 'C:\\Users\\bhart\\OneDrive\\Documents\\GitHub\\grid-main\\Backend\\model_final1'
-torch.serialization.add_safe_globals([
-    torchvision.models.efficientnet.EfficientNet
-])
-
-model = torch.load(
-    model_path,
-    map_location=torch.device("cpu"),
-    weights_only=False
-)
+model_path = 'C:\\Users\\Mayank bharti\\Documents\\GitHub\\grid\\Backend\\model_final1'
+model = torch.load(model_path, map_location=torch.device('cpu'))  # Load the model for CPU
 model.eval()  # Set model to evaluation mode
 
 # Define your class labels
