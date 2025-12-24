@@ -32,7 +32,7 @@ app = Flask(__name__)
 CORS(app, resources={r"/count": {"origins": "http://localhost:3000"}})
 
 # Load the pretrained YOLOv8 model
-model = YOLO('C:\\Users\\Mayank bharti\\Documents\\GitHub\\grid\\Backend\\yolov8n.pt')
+model = YOLO('C:\\Users\\bhart\\OneDrive\\Documents\\GitHub\\grid-main\\Backend\\yolov8n.pt')
 
 # Define allowed file types
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'webp'}
