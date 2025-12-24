@@ -8,7 +8,7 @@ from DB.connect import db  # Import MongoDB connection
 from DB.descript import store_ocr_result  # Import the function to store results in DB
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000"])  # Only allow requests from this origin
+CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}}) # Only allow requests from this origin
 
 # Specify the Tesseract command path
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
@@ -94,4 +94,4 @@ def upload_image():
     })
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=7000)
+    app.run(debug=True, host='0.0.0.0', port=7001)

@@ -1,15 +1,14 @@
 from pymongo import MongoClient
 import os
 
+MONGO_URI = os.getenv(
+    "MONGO_URI",
+    "mongodb+srv://MAYANKBHARTI:%231Mayank@cluster0.cuuaksv.mongodb.net/hackathonDB?retryWrites=true&w=majority"
+)
+
 def get_db():
-    client = MongoClient(os.getenv("MONGO_URI", "mongodb://localhost:27017"))
-    db = client['hackathonDB']  # Replace with your desired database name
-    return db
+    client = MongoClient(MONGO_URI)
+    return client["hackathonDB"]
 
 db = get_db()
-
-# Check if the db object is not None
-if db is not None:
-    print("MongoDB connected successfully!")
-else:
-    print("Failed to connect to MongoDB")
+print("MongoDB Atlas connected successfully!")

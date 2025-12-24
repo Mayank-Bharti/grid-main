@@ -10,7 +10,7 @@ from DB.freshness import store_freshness_result  # Import the function from db.p
 import torchvision
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS to allow cross-origin requests
+CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}}) # Enable CORS to allow cross-origin requests
 
 # Load your trained model
 model_path = 'C:\\Users\\bhart\\OneDrive\\Documents\\GitHub\\grid-main\\Backend\\model_final1'

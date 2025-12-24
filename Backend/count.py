@@ -29,7 +29,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 # Configure CORS
-CORS(app, resources={r"/count": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})
 
 # Load the pretrained YOLOv8 model
 model = YOLO('C:\\Users\\bhart\\OneDrive\\Documents\\GitHub\\grid-main\\Backend\\yolov8n.pt')
