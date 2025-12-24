@@ -48,16 +48,16 @@ This project is a smart vision-based quality testing system designed for the eco
 To run this project locally, follow these steps:
 
 1. *Clone the repository*:
-   bash
+   ```bash
    git clone https://github.com/Mayank-Bharti/grid-main.git
    cd grid-main
 2. *Install frontend dependencies*:
-   bash
+   ```bash
    cd ./frontend                                                                                                                                                                                    cd frontend
    npm install
    npm run dev
 4. *Install backend dependencies*:
-   bash
+   ```bash
    cd ./backend
    For Quantity: 1.python -m venv yolov8_env
                  2. yolov8_env\Scripts\activate
