@@ -1,14 +1,14 @@
 from pymongo import MongoClient
 import os
+from dotenv import load_dotenv
 
-MONGO_URI = os.getenv(
-    "MONGO_URI",
-    "mongodb+srv://MAYANKBHARTI:%231Mayank@cluster0.cuuaksv.mongodb.net/hackathonDB?retryWrites=true&w=majority"
-)
+load_dotenv()  # Load .env file
+
+MONGO_URI = os.getenv("MONGO_URI")  # Get URI from environment
 
 def get_db():
     client = MongoClient(MONGO_URI)
     return client["hackathonDB"]
 
 db = get_db()
-print("MongoDB Atlas connected successfully!")
+print("MongoDB connected successfully!")
